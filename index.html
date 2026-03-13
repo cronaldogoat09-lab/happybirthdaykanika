@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Code</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Outfit:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="emoji-header">
+            <span class="cake-emoji">🎂</span>
+        </div>
+
+        <h1 class="title">Secret Code from Snap <span>😝</span></h1>
+        <p class="subtitle">ENTER THE CODES TO UNLOCK YOUR SURPRISE</p>
+
+        <div class="glass-card">
+            <!-- Password 1 -->
+            <div class="input-group">
+                <label>🔒 ENTER THE CODE FROM SNAP • PASSWORD 1 💖</label>
+                <div class="input-row" id="row1">
+                    <input type="text" id="pass1" placeholder="type here..." onkeypress="handleEnter(event, 1)">
+                    <button class="unlock-btn" id="btn1" onclick="checkPass(1)">
+                        <span class="btn-icon">🔓</span> Unlock
+                    </button>
+                </div>
+                <div class="error-msg" id="err1"></div>
+            </div>
+
+            <!-- Password 2 -->
+            <div class="input-group">
+                <label>🔒 ENTER THE CODE FROM SNAP • PASSWORD 2 💖</label>
+                <div class="input-row" id="row2">
+                    <input type="text" id="pass2" placeholder="type here..." onkeypress="handleEnter(event, 2)">
+                    <button class="unlock-btn" id="btn2" onclick="checkPass(2)">
+                        <span class="btn-icon">🔓</span> Unlock
+                    </button>
+                </div>
+                <div class="error-msg" id="err2"></div>
+            </div>
+
+            <!-- Password 3 -->
+            <div class="input-group">
+                <label>🔒 ENTER THE CODE FROM SNAP • PASSWORD 3 💖</label>
+                <div class="input-row" id="row3">
+                    <input type="text" id="pass3" placeholder="type here..." onkeypress="handleEnter(event, 3)">
+                    <button class="unlock-btn" id="btn3" onclick="checkPass(3)">
+                        <span class="btn-icon">🔓</span> Unlock
+                    </button>
+                </div>
+                <div class="error-msg" id="err3"></div>
+            </div>
+        </div>
+
+        <p class="disclaimer">💖 Disclaimer: No emojis allowed in passwords</p>
+
+        <div id="reveal-section" class="hidden">
+            <div class="gradient-line"></div>
+            <button class="open-surprise-btn" onclick="openSurprise()">
+                <span class="btn-icon">🎉</span> Open Your Surprise!
+            </button>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
